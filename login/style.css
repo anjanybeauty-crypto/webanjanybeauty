@@ -17,7 +17,7 @@ body {
     justify-content: center;
     padding: 20px;
     line-height: 1.6;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
 }
 
@@ -124,7 +124,7 @@ body {
     border-radius: 24px;
     padding: 40px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
