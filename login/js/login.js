@@ -1,7 +1,7 @@
 document.getElementById("loginForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
     const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: `action=login&username=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        body: `action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
     });
 
     const data = await res.json();
