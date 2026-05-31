@@ -9,9 +9,14 @@ function logout() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const user = localStorage.getItem("username");
+    const userInfo = document.getElementById("userInfo");
+    const authArea = document.getElementById("authArea");
 
     if (user) {
-        document.getElementById("userInfo").innerText = "Halo, " + user;
-        document.getElementById("authArea").innerHTML = '<button onclick="logout()" class="nav-cta">Logout</button>';
+        userInfo.innerText = "Halo, " + user;
+        authArea.innerHTML = '<button onclick="logout()" class="nav-cta">Logout</button>';
+    } else {
+        userInfo.innerText = "Belum login";
+        authArea.innerHTML = '<button onclick="goLogin()" class="nav-cta">Login</button>';
     }
 });
